@@ -16,17 +16,6 @@ jobs:
         with:
           node-version: 16
           cache: 'npm'
-      - name: Caching Storybook
-        id: storybook-cache-build
-        uses: actions/cache@v3
-        with:
-          path: |
-            node_modules
-          key: ${{ runner.os }}-storybook-build-${{ github.run_id }}
-          restore-keys: |
-            ${{ runner.os }}-storybook-build-
-      - name: Install dependencies
-        run: npm install
       - name: Build storybook static files
         # Attention: we need to update the version on package.json to match with nyx packeage version
         run: npm run build-storybook
