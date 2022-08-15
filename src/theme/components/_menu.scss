@@ -1,0 +1,34 @@
+@import '../variables.scss';
+
+.nyx-menu {
+  padding: 0;
+  background-color: $white;
+  list-style-type: none;
+
+  &--group {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid $neutral-200;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  &--item {
+    padding: 10px;
+    color: $neutral-900;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $neutral-50;
+    }
+  }
+
+  &--title {
+    padding: 10px;
+    color: $neutral-900;
+    font-size: 12px;
+  }
+}

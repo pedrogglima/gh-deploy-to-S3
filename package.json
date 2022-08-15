@@ -1,0 +1,177 @@
+{
+  "name": "@sharethrough/nyx-design-system",
+  "version": "1.0.28",
+  "description": "Sharethroughs design system library with fully reusable components",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "module": "lib/index.em.js",
+  "author": "engineers@sharethrough.com",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/sharethrough/nyx-design-system"
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "1.7.1",
+    "@testing-library/jest-dom": "5.16.1",
+    "@testing-library/react": "12.1.2",
+    "@types/fontfaceobserver": "2.1.0",
+    "@types/jest": "27.4.0",
+    "@types/node": "14.14.31",
+    "@types/react": "18.0.2",
+    "@types/react-dom": "18.0.0",
+    "@types/react-redux": "7.1.22",
+    "@types/react-router-dom": "5.3.2",
+    "@types/react-test-renderer": "17.0.1",
+    "@types/rimraf": "3.0.2",
+    "@types/shelljs": "0.8.11",
+    "@types/styled-components": "5.1.20",
+    "@types/testing-library__jest-dom": "5.14.2",
+    "@types/webpack": "5.28.0",
+    "@types/webpack-env": "1.16.3",
+    "chalk": "4.1.2",
+    "cross-env": "7.0.3",
+    "eslint-config-prettier": "8.3.0",
+    "eslint-plugin-prettier": "4.0.0",
+    "eslint-plugin-react-hooks": "4.3.0",
+    "fontfaceobserver": "2.1.0",
+    "i18next": "21.6.6",
+    "i18next-browser-languagedetector": "6.1.2",
+    "i18next-scanner": "3.1.0",
+    "inquirer": "7.3.3",
+    "inquirer-directory": "2.2.0",
+    "jest-styled-components": "7.0.8",
+    "lint-staged": "12.1.7",
+    "node-plop": "0.26.2",
+    "plop": "2.7.4",
+    "prettier": "2.5.1",
+    "react": "17.0.2",
+    "react-app-polyfill": "3.0.0",
+    "react-dom": "17.0.2",
+    "react-helmet-async": "1.3.0",
+    "react-i18next": "11.16.5",
+    "react-is": "17.0.2",
+    "react-redux": "7.2.6",
+    "react-router-dom": "5.2.0",
+    "react-scripts": "5.0.1",
+    "react-test-renderer": "17.0.2",
+    "redux-injectors": "1.3.0",
+    "redux-saga": "1.1.3",
+    "rimraf": "3.0.2",
+    "sanitize.css": "13.0.0",
+    "serve": "13.0.2",
+    "shelljs": "0.8.5",
+    "styled-components": "5.3.3",
+    "stylelint": "14.2.0",
+    "stylelint-config-recommended": "6.0.0",
+    "stylelint-config-styled-components": "0.1.1",
+    "stylelint-processor-styled-components": "1.10.0",
+    "ts-node": "10.4.0",
+    "typescript": "4.5.4",
+    "web-vitals": "2.1.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "rollup -c",
+    "build:storybook": "react-scripts build",
+    "eject": "react-scripts eject",
+    "start:prod": "yarn run build && serve -s build",
+    "checkTs": "tsc --noEmit",
+    "eslint": "eslint --ext js,ts,tsx",
+    "lint": "yarn run eslint src",
+    "lint:fix": "yarn run eslint --fix src",
+    "lint:css": "stylelint src/**/*.css",
+    "generate": "plop --plopfile internals/generators/plopfile.ts",
+    "prettify": "prettier --write",
+    "extract-messages": "i18next-scanner --config=internals/extractMessages/i18next-scanner.config.js",
+    "storybook": "start-storybook -p 6006 -s public",
+    "build-storybook": "build-storybook -s public",
+    "deploy": "aws s3 sync storybook-static s3://pedrogglima.com.br"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "engines": {
+    "node": ">=14.6"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js,jsx}": [
+      "yarn run eslint --fix"
+    ],
+    "*.{md,json}": [
+      "prettier --write"
+    ]
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,ts,tsx}",
+      "!src/**/*/*.d.ts",
+      "!src/**/*/Loadable.{js,jsx,ts,tsx}",
+      "!src/**/*/messages.ts",
+      "!src/**/*/types.ts",
+      "!src/index.tsx"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 90,
+        "functions": 90,
+        "lines": 90,
+        "statements": 90
+      }
+    }
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "22.0.1",
+    "@rollup/plugin-node-resolve": "13.3.0",
+    "@storybook/addon-actions": "^6.5.9",
+    "@storybook/addon-essentials": "^6.5.9",
+    "@storybook/addon-interactions": "^6.5.9",
+    "@storybook/addon-links": "^6.5.9",
+    "@storybook/builder-webpack5": "^6.5.9",
+    "@storybook/manager-webpack5": "^6.5.9",
+    "@storybook/node-logger": "^6.5.9",
+    "@storybook/preset-create-react-app": "^4.1.2",
+    "@storybook/preset-scss": "1.0.3",
+    "@storybook/react": "^6.5.9",
+    "@storybook/testing-library": "^0.0.13",
+    "babel-plugin-named-exports-order": "^0.0.2",
+    "css-loader": "6.7.1",
+    "postcss-url": "10.1.3",
+    "prop-types": "^15.8.1",
+    "rollup": "2.77.1",
+    "rollup-plugin-copy": "3.4.0",
+    "rollup-plugin-dts": "4.2.2",
+    "rollup-plugin-peer-deps-external": "2.2.4",
+    "rollup-plugin-postcss": "4.0.2",
+    "rollup-plugin-typescript2": "0.32.1",
+    "sass": "1.52.3",
+    "sass-loader": "13.0.0",
+    "style-loader": "3.3.1",
+    "webpack": "^5.73.0"
+  },
+  "eslintConfig": {
+    "overrides": [
+      {
+        "files": [
+          "**/*.stories.*"
+        ],
+        "rules": {
+          "import/no-anonymous-default-export": "off"
+        }
+      }
+    ]
+  },
+  "bugs": {
+    "url": "https://github.com/sharethrough/nyx-design-system/issues"
+  },
+  "homepage": "https://pedrogglima.com/"
+}

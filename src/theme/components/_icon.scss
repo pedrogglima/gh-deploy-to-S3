@@ -1,0 +1,1119 @@
+@import '../variables.scss';
+
+@mixin mask($value) {
+  -webkit-mask: #{$value};
+  mask: #{$value};
+}
+
+@mixin mask-size($value) {
+  -webkit-mask-size: #{$value};
+  mask-size: #{$value};
+}
+
+.nyx-icon {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-color: $neutral-600;
+  @include mask(url('~/src/assets/icons/question.svg') no-repeat 100% 100%);
+  @include mask-size(cover);
+
+  &__dark {
+    background-color: $white;
+  }
+
+  &__primary {
+    background-color: $primary-blue-300;
+  }
+
+  &__secondary {
+    background-color: $neutral-200;
+  }
+
+  &__success {
+    background-color: $primary-green-600;
+  }
+
+  &__warning {
+    background-color: $alert-orange-600;
+  }
+
+  &__error {
+    background-color: $alert-red-600;
+  }
+
+  &__small {
+    width: 10px;
+    height: 10px;
+  }
+
+  &__large {
+    width: 24px;
+    height: 24px;
+  }
+
+  &--ad {
+    @include mask(url('~/src/assets/icons/ad.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--alert-alt {
+    @include mask(url('~/src/assets/icons/alert-alt.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--alert-circle {
+    @include mask(url('~/src/assets/icons/alert-circle.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--alert {
+    @include mask(url('~/src/assets/icons/alert.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--apps {
+    @include mask(url('~/src/assets/icons/apps.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--arrow-diagram-down {
+    @include mask(url('~/src/assets/icons/arrow-diagram-down.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--arrow-diagram-right {
+    @include mask(url('~/src/assets/icons/arrow-diagram-right.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--arrow-diagram-up {
+    @include mask(url('~/src/assets/icons/arrow-diagram-up.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--arrow-double-down {
+    @include mask(url('~/src/assets/icons/arrow-double-down.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--arrow-double-left {
+    @include mask(url('~/src/assets/icons/arrow-double-left.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--arrow-double-right {
+    @include mask(url('~/src/assets/icons/arrow-double-right.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--arrow-double-up {
+    @include mask(url('~/src/assets/icons/arrow-double-up.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--arrow-down-circle {
+    @include mask(url('~/src/assets/icons/arrow-down-circle.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--arrow-down {
+    @include mask(url('~/src/assets/icons/arrow-down.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--arrow-going-down {
+    @include mask(url('~/src/assets/icons/arrow-going-down.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--arrow-going-up {
+    @include mask(url('~/src/assets/icons/arrow-going-up.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--arrow-left-circle {
+    @include mask(url('~/src/assets/icons/arrow-left-circle.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--arrow-left {
+    @include mask(url('~/src/assets/icons/arrow-left.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--arrow-right-circle {
+    @include mask(url('~/src/assets/icons/arrow-right-circle.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--arrow-right {
+    @include mask(url('~/src/assets/icons/arrow-right.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--arrow-up-circle {
+    @include mask(url('~/src/assets/icons/arrow-up-circle.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--arrow-up {
+    @include mask(url('~/src/assets/icons/arrow-up.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--at {
+    @include mask(url('~/src/assets/icons/at.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--attachment {
+    @include mask(url('~/src/assets/icons/attachment.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--bar-chart-line {
+    @include mask(url('~/src/assets/icons/bar-chart-line.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--bar-chart {
+    @include mask(url('~/src/assets/icons/bar-chart.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--bluetooth {
+    @include mask(url('~/src/assets/icons/bluetooth.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--book-lines {
+    @include mask(url('~/src/assets/icons/book-lines.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--book {
+    @include mask(url('~/src/assets/icons/book.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--bookmark {
+    @include mask(url('~/src/assets/icons/bookmark.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--briefcase {
+    @include mask(url('~/src/assets/icons/briefcase.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--bubble-dots {
+    @include mask(url('~/src/assets/icons/bubble-dots.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--bubble-square-dots {
+    @include mask(url('~/src/assets/icons/bubble-square-dots.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--bubble-square-question {
+    @include mask(url('~/src/assets/icons/bubble-square-question.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--bubble-square {
+    @include mask(url('~/src/assets/icons/bubble-square.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--bubble {
+    @include mask(url('~/src/assets/icons/bubble.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--calendar-none {
+    @include mask(url('~/src/assets/icons/calendar-none.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--calendar-search {
+    @include mask(url('~/src/assets/icons/calendar-search.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--calendar-time {
+    @include mask(url('~/src/assets/icons/calendar-time.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--calendar {
+    @include mask(url('~/src/assets/icons/calendar.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--cash {
+    @include mask(url('~/src/assets/icons/cash.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--check-circle {
+    @include mask(url('~/src/assets/icons/check-circle.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--check-square {
+    @include mask(url('~/src/assets/icons/check-square.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--check {
+    @include mask(url('~/src/assets/icons/check.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--chevron-down {
+    @include mask(url('~/src/assets/icons/chevron-down.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--chevron-dropdown {
+    @include mask(url('~/src/assets/icons/chevron-dropdown.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--chevron-left-stop {
+    @include mask(url('~/src/assets/icons/chevron-left-stop.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--chevron-left {
+    @include mask(url('~/src/assets/icons/chevron-left.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--chevron-right-stop {
+    @include mask(url('~/src/assets/icons/chevron-right-stop.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--chevron-right {
+    @include mask(url('~/src/assets/icons/chevron-right.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--chevron-up {
+    @include mask(url('~/src/assets/icons/chevron-up.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--clock {
+    @include mask(url('~/src/assets/icons/clock.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--clockwise {
+    @include mask(url('~/src/assets/icons/clockwise.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--close-circle-alt {
+    @include mask(url('~/src/assets/icons/close-circle-alt.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--close-circle {
+    @include mask(url('~/src/assets/icons/close-circle.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--close-square {
+    @include mask(url('~/src/assets/icons/close-square.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--close {
+    @include mask(url('~/src/assets/icons/close.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--cloud-download {
+    @include mask(url('~/src/assets/icons/cloud-download.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--cloud-transfer {
+    @include mask(url('~/src/assets/icons/cloud-transfer.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--cloud-upload {
+    @include mask(url('~/src/assets/icons/cloud-upload.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--colors {
+    @include mask(url('~/src/assets/icons/colors.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--compass {
+    @include mask(url('~/src/assets/icons/compass.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--computer {
+    @include mask(url('~/src/assets/icons/computer.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--connect {
+    @include mask(url('~/src/assets/icons/connect.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--conversation {
+    @include mask(url('~/src/assets/icons/conversation.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--converstion-alt {
+    @include mask(url('~/src/assets/icons/converstion-alt.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--copy {
+    @include mask(url('~/src/assets/icons/copy.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--counter-clockwise {
+    @include mask(url('~/src/assets/icons/counter-clockwise.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--cut {
+    @include mask(url('~/src/assets/icons/cut.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--dashboard-computer {
+    @include mask(url('~/src/assets/icons/dashboard-computer.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--dashboard-full {
+    @include mask(url('~/src/assets/icons/dashboard-full.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--dashboard-half {
+    @include mask(url('~/src/assets/icons/dashboard-half.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--delete-open {
+    @include mask(url('~/src/assets/icons/delete-open.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--delete {
+    @include mask(url('~/src/assets/icons/delete.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--denied-alt {
+    @include mask(url('~/src/assets/icons/denied-alt.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--denied {
+    @include mask(url('~/src/assets/icons/denied.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--directions {
+    @include mask(url('~/src/assets/icons/directions.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--dots-vertical {
+    @include mask(url('~/src/assets/icons/dots-vertical.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--dots {
+    @include mask(url('~/src/assets/icons/dots.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--download {
+    @include mask(url('~/src/assets/icons/download.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--drawer {
+    @include mask(url('~/src/assets/icons/drawer.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--dropdown {
+    @include mask(url('~/src/assets/icons/dropdown.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--earth-pin {
+    @include mask(url('~/src/assets/icons/earth-pin.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--earth {
+    @include mask(url('~/src/assets/icons/earth.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--edit-file {
+    @include mask(url('~/src/assets/icons/edit-file.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--edit-paper {
+    @include mask(url('~/src/assets/icons/edit-paper.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--edit {
+    @include mask(url('~/src/assets/icons/edit.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--enhanced {
+    @include mask(url('~/src/assets/icons/enhanced.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--facebook {
+    @include mask(url('~/src/assets/icons/facebook.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--filter {
+    @include mask(url('~/src/assets/icons/filter.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--folder-empty {
+    @include mask(url('~/src/assets/icons/folder-empty.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--folder {
+    @include mask(url('~/src/assets/icons/folder.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--globe {
+    @include mask(url('~/src/assets/icons/globe.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--goal-target {
+    @include mask(url('~/src/assets/icons/goal-target.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--google {
+    @include mask(url('~/src/assets/icons/google.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--hamburger-menu {
+    @include mask(url('~/src/assets/icons/hamburger-menu.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--hammer {
+    @include mask(url('~/src/assets/icons/hammer.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--hide {
+    @include mask(url('~/src/assets/icons/hide.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--hierarchy {
+    @include mask(url('~/src/assets/icons/hierarchy.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--home {
+    @include mask(url('~/src/assets/icons/home.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--info {
+    @include mask(url('~/src/assets/icons/info.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--key {
+    @include mask(url('~/src/assets/icons/key.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--label-down {
+    @include mask(url('~/src/assets/icons/label-down.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--label-left {
+    @include mask(url('~/src/assets/icons/label-left.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--label-right {
+    @include mask(url('~/src/assets/icons/label-right.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--label-up {
+    @include mask(url('~/src/assets/icons/label-up.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--label {
+    @include mask(url('~/src/assets/icons/label.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--labels {
+    @include mask(url('~/src/assets/icons/labels.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--laptop {
+    @include mask(url('~/src/assets/icons/laptop.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--layout-left {
+    @include mask(url('~/src/assets/icons/layout-left.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--layouts {
+    @include mask(url('~/src/assets/icons/layouts.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--lightbulb-alt {
+    @include mask(url('~/src/assets/icons/lightbulb-alt.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--lightbulb {
+    @include mask(url('~/src/assets/icons/lightbulb.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--like {
+    @include mask(url('~/src/assets/icons/like.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--line-chart-alt {
+    @include mask(url('~/src/assets/icons/line-chart-alt.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--line-chart {
+    @include mask(url('~/src/assets/icons/line-chart.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--link {
+    @include mask(url('~/src/assets/icons/link.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--linkedin {
+    @include mask(url('~/src/assets/icons/linkedin.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--loading {
+    @include mask(url('~/src/assets/icons/loading.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--locked {
+    @include mask(url('~/src/assets/icons/locked.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--login-circle {
+    @include mask(url('~/src/assets/icons/login-circle.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--login {
+    @include mask(url('~/src/assets/icons/login.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--logout-circle {
+    @include mask(url('~/src/assets/icons/logout-circle.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--logout {
+    @include mask(url('~/src/assets/icons/logout.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--mail-open {
+    @include mask(url('~/src/assets/icons/mail-open.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--mail {
+    @include mask(url('~/src/assets/icons/mail.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--man {
+    @include mask(url('~/src/assets/icons/man.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--medal-alt {
+    @include mask(url('~/src/assets/icons/medal-alt.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--medal-check {
+    @include mask(url('~/src/assets/icons/medal-check.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--medal {
+    @include mask(url('~/src/assets/icons/medal.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--mobile {
+    @include mask(url('~/src/assets/icons/mobile.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--money-pin {
+    @include mask(url('~/src/assets/icons/money-pin.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--money {
+    @include mask(url('~/src/assets/icons/money.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--more {
+    @include mask(url('~/src/assets/icons/more.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--mountain {
+    @include mask(url('~/src/assets/icons/mountain.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--mute {
+    @include mask(url('~/src/assets/icons/mute.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--next {
+    @include mask(url('~/src/assets/icons/next.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--notification-check {
+    @include mask(url('~/src/assets/icons/notification-check.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--notification-none {
+    @include mask(url('~/src/assets/icons/notification-none.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--notification {
+    @include mask(url('~/src/assets/icons/notification.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--notify-time {
+    @include mask(url('~/src/assets/icons/notify-time.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--paint {
+    @include mask(url('~/src/assets/icons/paint.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--paper-chart {
+    @include mask(url('~/src/assets/icons/paper-chart.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--paste {
+    @include mask(url('~/src/assets/icons/paste.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--pause {
+    @include mask(url('~/src/assets/icons/pause.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--phone-call {
+    @include mask(url('~/src/assets/icons/phone-call.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--phone {
+    @include mask(url('~/src/assets/icons/phone.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--picture {
+    @include mask(url('~/src/assets/icons/picture.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--pie-chart {
+    @include mask(url('~/src/assets/icons/pie-chart.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--piggy-bank {
+    @include mask(url('~/src/assets/icons/piggy-bank.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--pin-alt {
+    @include mask(url('~/src/assets/icons/pin-alt.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--pin-map {
+    @include mask(url('~/src/assets/icons/pin-map.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--pin {
+    @include mask(url('~/src/assets/icons/pin.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--play {
+    @include mask(url('~/src/assets/icons/play.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--plus-circle {
+    @include mask(url('~/src/assets/icons/plus-circle.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--plus-square {
+    @include mask(url('~/src/assets/icons/plus-square.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--plus {
+    @include mask(url('~/src/assets/icons/plus.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--presentation {
+    @include mask(url('~/src/assets/icons/presentation.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--previous {
+    @include mask(url('~/src/assets/icons/previous.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--print {
+    @include mask(url('~/src/assets/icons/print.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--question-circle {
+    @include mask(url('~/src/assets/icons/question-circle.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--question-square {
+    @include mask(url('~/src/assets/icons/question-square.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--question {
+    @include mask(url('~/src/assets/icons/question.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--remove-circle {
+    @include mask(url('~/src/assets/icons/remove-circle.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--remove-square {
+    @include mask(url('~/src/assets/icons/remove-square.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--remove {
+    @include mask(url('~/src/assets/icons/remove.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--save {
+    @include mask(url('~/src/assets/icons/save.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--scale {
+    @include mask(url('~/src/assets/icons/scale.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--search-close {
+    @include mask(url('~/src/assets/icons/search-close.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--search-map {
+    @include mask(url('~/src/assets/icons/search-map.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--search-world {
+    @include mask(url('~/src/assets/icons/search-world.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--search {
+    @include mask(url('~/src/assets/icons/search.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--send {
+    @include mask(url('~/src/assets/icons/send.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--server {
+    @include mask(url('~/src/assets/icons/server.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--settings-calendar {
+    @include mask(url('~/src/assets/icons/settings-calendar.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--settings-file {
+    @include mask(url('~/src/assets/icons/settings-file.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--settings-hand {
+    @include mask(url('~/src/assets/icons/settings-hand.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--settings {
+    @include mask(url('~/src/assets/icons/settings.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--share {
+    @include mask(url('~/src/assets/icons/share.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--slider {
+    @include mask(url('~/src/assets/icons/slider.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--stats-down {
+    @include mask(url('~/src/assets/icons/stats-down.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--stats-up {
+    @include mask(url('~/src/assets/icons/stats-up.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--stats {
+    @include mask(url('~/src/assets/icons/stats.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--synchronise {
+    @include mask(url('~/src/assets/icons/synchronise.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--tags {
+    @include mask(url('~/src/assets/icons/tags.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--task-check {
+    @include mask(url('~/src/assets/icons/task-check.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--task-download {
+    @include mask(url('~/src/assets/icons/task-download.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--task-upload {
+    @include mask(url('~/src/assets/icons/task-upload.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--task {
+    @include mask(url('~/src/assets/icons/task.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--text {
+    @include mask(url('~/src/assets/icons/text.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--timer {
+    @include mask(url('~/src/assets/icons/timer.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--trophy {
+    @include mask(url('~/src/assets/icons/trophy.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--tv {
+    @include mask(url('~/src/assets/icons/tv.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--twitter {
+    @include mask(url('~/src/assets/icons/twitter.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--unlocked-alt {
+    @include mask(url('~/src/assets/icons/unlocked-alt.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--unlocked {
+    @include mask(url('~/src/assets/icons/unlocked.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--upload {
+    @include mask(url('~/src/assets/icons/upload.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--user-circle {
+    @include mask(url('~/src/assets/icons/user-circle.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--user {
+    @include mask(url('~/src/assets/icons/user.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--view {
+    @include mask(url('~/src/assets/icons/view.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--volume-low {
+    @include mask(url('~/src/assets/icons/volume-low.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--volume-none {
+    @include mask(url('~/src/assets/icons/volume-none.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--volume-up {
+    @include mask(url('~/src/assets/icons/volume-up.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--volume0high {
+    @include mask(url('~/src/assets/icons/volume0high.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--wallet {
+    @include mask(url('~/src/assets/icons/wallet.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--watch {
+    @include mask(url('~/src/assets/icons/watch.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--woman {
+    @include mask(url('~/src/assets/icons/woman.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--world {
+    @include mask(url('~/src/assets/icons/world.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--wrench-alt {
+    @include mask(url('~/src/assets/icons/wrench-alt.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--wrench {
+    @include mask(url('~/src/assets/icons/wrench.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--zip {
+    @include mask(url('~/src/assets/icons/zip.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--zoom-in {
+    @include mask(url('~/src/assets/icons/zoom-in.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+
+  &--zoom-out {
+    @include mask(url('~/src/assets/icons/zoom-out.svg') no-repeat 100% 100%);
+    @include mask-size(cover);
+  }
+}

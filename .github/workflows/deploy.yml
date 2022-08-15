@@ -1,0 +1,40 @@
+name: Deploy Infrastructure
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  runscript:
+    name: Deploying Storybook
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          cache: 'npm'
+      - name: Caching Storybook
+        id: storybook-cache-build
+        uses: actions/cache@v3
+        with:
+          path: |
+            node_modules
+          key: ${{ runner.os }}-storybook-build-${{ github.run_id }}
+          restore-keys: |
+            ${{ runner.os }}-storybook-build-
+      - name: Install dependencies
+        run: npm install
+      - name: Build storybook static files
+        # Attention: we need to update the version on package.json to match with nyx packeage version
+        run: npm run build-storybook
+      - name: Set AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-east-1
+      - name: Deploy to S3
+        run: npm run deploy

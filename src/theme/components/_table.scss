@@ -1,0 +1,64 @@
+@import '../variables.scss';
+
+.nyx-table {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  &--table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  &--header {
+    background-color: $neutral-50;
+    border-bottom: 1px solid $neutral-100;
+
+    .nyx-table--cell {
+      color: $neutral-400;
+      font-weight: 500;
+      text-align: left;
+    }
+  }
+
+  &--row {
+    border-bottom: 1px solid $neutral-100;
+  }
+
+  &--cell {
+    color: $black;
+    padding: 10px;
+
+    &__sortable {
+      cursor: pointer;
+    }
+
+    &__selectable {
+      width: 16px;
+    }
+  }
+
+  &--sort {
+    margin-left: 10px;
+  }
+
+  &--pagination {
+    align-self: flex-end;
+    color: $neutral-400;
+    margin-top: 20px;
+  }
+
+  &--page-display {
+    margin-right: 10px;
+  }
+
+  &--page-controls {
+    cursor: pointer;
+    margin-left: 15px;
+
+    &__disabled {
+      color: $neutral-200;
+      cursor: not-allowed;
+    }
+  }
+}

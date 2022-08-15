@@ -1,0 +1,43 @@
+@import '../variables.scss';
+
+.nyx-chip {
+  padding: 6px 16px;
+  color: $neutral-900;
+  background-color: $neutral-100;
+  border-radius: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  &--icon {
+    margin-left: 5px;
+    cursor: pointer;
+  }
+
+  &__small {
+    padding: 1px 16px;
+  }
+
+  &__success {
+    color: $primary-green-600;
+    background-color: $primary-green-50;
+    border: 1px solid $primary-green-600;
+  }
+
+  &__warning {
+    color: $alert-orange-600;
+    background-color: $alert-orange-50;
+    border: 1px solid $alert-orange-600;
+  }
+
+  &__error {
+    color: $alert-red-600;
+    background-color: $alert-red-50;
+    border: 1px solid $alert-red-600;
+  }
+  &__disabled {
+    border: none;
+    opacity: 70%;
+    pointer-events: none;
+  }
+}

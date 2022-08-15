@@ -1,0 +1,33 @@
+@import '../variables.scss';
+
+
+.searchbar {
+  width: 500px;
+  position: relative;
+
+  &--input {
+    width: 100%;
+  }
+
+  &--results {
+    position: absolute;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    margin-top: 20px;
+    z-index: 1;
+  }
+
+  &--result {
+    display: flex;
+  }
+
+  &--result-name {
+    color: #0e1c28;
+    flex-grow: 1;
+  }
+
+  &--result-info {
+    color: #737373;
+    text-align: right;
+    width: 120px;
+  }
+}

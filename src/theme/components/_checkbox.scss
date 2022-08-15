@@ -1,0 +1,156 @@
+@import '../variables.scss';
+
+@mixin mask($value) {
+  -webkit-mask: #{$value};
+  mask: #{$value};
+}
+
+@mixin mask-size($value) {
+  -webkit-mask-size: #{$value};
+  mask-size: #{$value};
+}
+
+.nyx-selectable-input {
+  display: flex;
+  align-items: center;
+  .nyx-checkbox {
+
+    &--input {
+      appearance: none;
+      border: 1px solid $neutral-200;
+      border-radius: 2px;
+      width: 16px;
+      height: 16px;
+      cursor: pointer;
+      display: grid;
+      place-content: center;
+
+      &:checked {
+        background-color: $primary-blue-500;
+        border-color: $primary-blue-500;
+
+        &::before {
+          content: '\00a0';
+          width: 12px;
+          height: 12px;
+          background-color: $white;
+          @include mask(url('~/src/assets/icons/check.svg') no-repeat 100% 100%);
+          @include mask-size(cover);
+        }
+      }
+    }
+
+    &--label {
+      padding-left: 10px;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+    }
+
+    &--description {
+      color: $neutral-200;
+    }
+
+    &__indeterminate:checked::before {
+      @include mask(url('~/src/assets/icons/remove.svg') no-repeat 100% 100%);
+      @include mask-size(cover);
+    }
+  }
+
+  .nyx-radio {
+    border-radius: 100px;
+
+    &--input {
+      border: 1.5px solid $neutral-600;
+      height: 15px;
+      width: 15px;
+      left: 0px;
+      top: 0px;
+      border-radius: 0px;
+
+      &:checked {
+        border: 1.5px solid $primary-blue-500;
+      }
+    }
+
+    &:hover {
+      background: $primary-blue-50;
+    }
+
+    &--label {
+      padding-left: 10px;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+    }
+
+    &--description {
+      color: $neutral-400;
+      font-size: 14px;
+    }
+  }
+
+  .nyx-toggle {
+    height: 10px;
+    width: 28px;
+    background-color: $neutral-200;
+    border-radius: 99px;
+
+    &--input:checked {
+      background-color: $primary-blue-300;
+    }
+
+    &--input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+
+      &:checked + .slider:before {
+        -webkit-transform: translateX(16px);
+        -ms-transform: translateX(16px);
+        transform: translateX(16px);
+        background-color: $primary-blue-500;
+      }
+    }
+
+    &--label {
+      padding-left: 10px;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+    }
+
+    &--description {
+      color: $neutral-400;
+      font-size: 14px;
+    }
+  }
+
+  .slider {
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    top: -21px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    border-radius: 99px;
+    width: 28px;
+
+    &::before {
+      content: '';
+      height: 16px;
+      width: 16px;
+      left: 0;
+      bottom: -2.5px;
+      background-color: $white;
+      -webkit-transition: 0.4s;
+      transition: 0.4s;
+      border-radius: 99px;
+      box-shadow: 0px 2px 4px #B4B4BB, 0px 4px 8px #D2D2D6;
+    }
+  }
+}

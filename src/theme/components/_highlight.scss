@@ -1,0 +1,13 @@
+@import '../variables.scss';
+
+.nyx-highlight {
+  &--match {
+    color: $primary-blue-300;
+  }
+
+  &__secondary {
+    .nyx-highlight--match {
+      color: inherit;
+    }
+  }
+}
