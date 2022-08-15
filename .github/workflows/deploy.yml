@@ -16,6 +16,19 @@ jobs:
         with:
           node-version: 16
           cache: 'npm'
+          registry-url: 'https://npm.pkg.github.com'
+          scope: '@sharethrough'
+      # - name: Caching Storybook
+      #   id: storybook-cache-build
+      #   uses: actions/cache@v3
+      #   with:
+      #     path: |
+      #       node_modules
+      #     key: ${{ runner.os }}-storybook-build-${{ github.run_id }}
+      #     restore-keys: |
+      #       ${{ runner.os }}-storybook-build-
+      - name: Install dependencies
+        run: yarn install
       - name: Build storybook static files
         # Attention: we need to update the version on package.json to match with nyx packeage version
         run: yarn build-storybook
@@ -26,4 +39,4 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-east-1
       - name: Deploy to S3
-        run: yarn run deploy
+        run: yarn deploy
