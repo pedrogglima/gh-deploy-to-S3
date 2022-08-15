@@ -18,7 +18,7 @@ jobs:
           cache: 'npm'
       - name: Build storybook static files
         # Attention: we need to update the version on package.json to match with nyx packeage version
-        run: npm run build-storybook
+        run: yarn build-storybook
       - name: Set AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
@@ -26,4 +26,4 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-east-1
       - name: Deploy to S3
-        run: npm run deploy
+        run: yarn run deploy
